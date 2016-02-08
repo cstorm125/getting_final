@@ -72,4 +72,4 @@ tidy<-aggregate(.~subject+label,data=whole[,1:81],mean)
 tidy<-tidy[order(tidy$subject),]
 
 #Write table
-write.table(tidy,file='tidy.txt')
+write.table(tidy,file='tidy.txt',row.name=FALSE)
