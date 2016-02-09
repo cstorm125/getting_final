@@ -26,6 +26,7 @@ names(subject_test)<-c('subject')
 X_test <- read.table(file='UCI HAR Dataset/test/X_test.txt')
 #Match feature names with feature columns
 names(X_test)<-feature_name[,2]
+
 #Get only variables related to mean and std
 q<-names(X_test)
 index <- q[grep('(mean|std)',names(X_test))]
@@ -69,6 +70,7 @@ whole <- rbind(test,train)
 #Aggregate by subject and label using mean
 tidy<-aggregate(.~subject+label,data=whole[,1:68],mean)
 tidy<-tidy[order(tidy$subject),]
+names(tidy)<-gsub('[-()]','',names(tidy))
 
 #Write table
 write.table(tidy,file='tidy.txt',row.name=FALSE)
