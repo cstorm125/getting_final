@@ -11,7 +11,7 @@ if (!file.exists('UCI HAR Dataset')) unzip(zipname)
 #test/train
 #subject_test/train.txt - subject identifier
 #X_test/train.txt - features (identified by number 1-561)
-#Y_test/train.txt - labels (identified by number 1-6)tra
+#Y_test/train.txt - labels (identified by number 1-6)
 
 #Get feature names
 feature_name <- read.table(file='UCI HAR Dataset/features.txt')
@@ -28,9 +28,8 @@ X_test <- read.table(file='UCI HAR Dataset/test/X_test.txt')
 names(X_test)<-feature_name[,2]
 #Get only variables related to mean and std
 q<-names(X_test)
-mean_index <- q[grep('mean',names(X_test))]
-std_index <- q[grep('std',names(X_test))]
-index <- c(mean_index,std_index)
+index <- q[grep('(mean|std)',names(X_test))]
+index <- index[grep('Freq',index,invert=TRUE)]
 
 #Read y
 y_test <- read.table(file='UCI HAR Dataset/test/y_test.txt')
@@ -68,7 +67,7 @@ train$set<-'train'
 whole <- rbind(test,train)
 
 #Aggregate by subject and label using mean
-tidy<-aggregate(.~subject+label,data=whole[,1:81],mean)
+tidy<-aggregate(.~subject+label,data=whole[,1:68],mean)
 tidy<-tidy[order(tidy$subject),]
 
 #Write table
