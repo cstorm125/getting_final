@@ -6,7 +6,7 @@ The *tidy* dataset is summarized from the [Human Activity Recognition Using Smar
 
 The HAR dataset is the result of the experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each participant has a smartphone (Samsung Galaxy S II) strapped to their waist and performed six types of activities. The smartphone recorded data from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ as features. 
 
-The *tidy* dataset aggregates the average of a set of features from the HAR dataset, for each activity and each subject. The set of features include only the measurements on the mean and standard deviation for each measurement (79 out of 561 features in HAR). The tidy dataset includes both training and testing sets of the HAR dataset. It includes a variable for subject ('subject'), a variable for activity label ('label'), and 79 features ('tBodyAcc-mean()-X', 'tBodyAcc-mean()-Y', etc.). Six activity types times 30 subjects resulted in 180 observations in total.
+The *tidy* dataset aggregates the average of a set of features from the HAR dataset, for each activity and each subject. The set of features include only the measurements on the mean and standard deviation for each measurement (66 out of 561 features in HAR). The tidy dataset includes both training and testing sets of the HAR dataset. It includes a variable for subject ('subject'), a variable for activity label ('label'), and 66 features ('tBodyAcc-mean()-X', 'tBodyAcc-mean()-Y', etc.). Six activity types times 30 subjects resulted in 180 observations in total.
 
 ## 2. Data Transformation
 
@@ -48,7 +48,7 @@ LAYING
 
 ### 3.2 Features
 
-Features include the mean and standard deviation for each measurement from the HAR dataset (normalized to be within [-1,1]), aggregated by subjects and activity labels through mean() function. This resulted in 79 variables in total. More information about the feautures are in the 'features_info.txt' of HAR dataset:
+Features include the mean and standard deviation for each measurement from the HAR dataset (normalized to be within [-1,1]), aggregated by subjects and activity labels through mean() function. This resulted in 66 variables in total. More information about the feautures are in the 'features_info.txt' of HAR dataset:
 
 ```{r}
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 

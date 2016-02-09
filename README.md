@@ -14,7 +14,7 @@ The R file that performs the data transformation from HAR to tidy as detailed in
 
 The resulting dataset from transforming the HAR dataset as detailed in CodeBook.md. 
 
-Each row is the subject x activity label (observation). It has a total of 180 observations and 79 features.
+Each row is the subject x activity label (observation). It has a total of 180 observations and 66 features.
 
 To read the dataset
 ```{r}
