@@ -1,6 +1,6 @@
 # Overview
 
-The *tidy* dataset is summarized from the [Human Activity Recognition Using Smartphones (HAR) Dataset](www.smartlab.ws). It contains the following files. 
+The *tidy* dataset is summarized from the [Human Activity Recognition Using Smartphones (HAR) Dataset](www.smartlab.ws). It contains the following files. It is part of the Coursera Data Science Specialization's [Getting and Cleaning Data](https://www.coursera.org/account/accomplishments/records/B8Z4ERJDYNDW) Final Project.
 
 # CodeBook.md
 
